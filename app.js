@@ -38,6 +38,7 @@ requestAnimationFrame(onanimationframe);
 window.addEventListener("load", cameraStart, false);
 
 cameraTrigger.addEventListener("click", (event) => {
+    cameraTrigger.hidden = true;
     cameraView.requestFullscreen({ navigationUI: "hide" })
       .then(() => {})
       .catch((err) => {
