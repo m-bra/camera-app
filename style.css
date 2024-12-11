@@ -17,6 +17,10 @@ html, body{
     filter: FlipH;
 }
 
+#camera-view {
+  display: none;
+}
+
 #camera--trigger{
     width: 200px;
     background-color: black;
