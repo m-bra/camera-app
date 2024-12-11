@@ -17,7 +17,7 @@ html, body{
     filter: FlipH;
 }
 
-#camera-view {
+#camera--view {
   display: none;
 }
 
