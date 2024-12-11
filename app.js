@@ -37,15 +37,16 @@ requestAnimationFrame(onanimationframe);
 // Start the video stream when the window loads
 window.addEventListener("load", cameraStart, false);
 
+cameraView.addEventListener("click", (event) => {
+    cameraView.requestFullscreen({ navigationUI: "hide" })
+      .then(() => {})
+      .catch((err) => {
+        alert(
+          `An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`,
+        );
+      });
+});
 
-
-document.documentElement.requestFullscreen({ navigationUI: "hide" })
-  .then(() => {})
-  .catch((err) => {
-    alert(
-      `An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`,
-    );
-  });
 
 
 
