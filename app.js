@@ -37,7 +37,7 @@ requestAnimationFrame(onanimationframe);
 // Start the video stream when the window loads
 window.addEventListener("load", cameraStart, false);
 
-cameraView.addEventListener("click", (event) => {
+cameraTrigger.addEventListener("click", (event) => {
     cameraView.requestFullscreen({ navigationUI: "hide" })
       .then(() => {})
       .catch((err) => {
