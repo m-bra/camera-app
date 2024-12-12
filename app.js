@@ -22,9 +22,13 @@ function cameraStart() {
 }
 
 function onanimationframe() {
-    cameraSensor.width = cameraView.videoWidth;
-    cameraSensor.height = cameraView.videoHeight;
-    cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
+    let w = cameraSensor.width = cameraView.videoWidth;
+    let h = cameraSensor.height = cameraView.videoHeight;
+    let ctxt = cameraSensor.getContext("2d");
+    ctxt.drawImage(cameraView, 0, 0);
+    let imgdata = ctxt.getEemageData(0, 0, w / 2, h);
+    ctxt.putImageData(0, 0, imgdata);
+    ctxt.putImageData(w / 2, 0, imgdata);
     // cameraOutput.src = cameraSensor.toDataURL("image/webp");
     // cameraOutput.classList.add("taken");
     // track.stop();
