@@ -22,12 +22,9 @@ function cameraStart() {
 }
 
 function onanimationframe() {
-    var w = cameraView.videoWidth;
-    cameraSensor.width = w;
-    var h = cameraView.videoHeight;
-    cameraSensor.height = h;
-    let ctxt = cameraSensor.getContext("2d");
-    ctxt.drawImage(cameraView, 0, 0);
+    cameraSensor.width = cameraView.videoWidth;
+    cameraSensor.height = cameraView.videoHeight;
+    cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
     // let imgdata = ctxt.getImageData(0, 0, w / 2, h);
     // ctxt.putImageData(0, 0, imgdata);
     // ctxt.putImageData(w / 2, 0, imgdata);
