@@ -31,9 +31,9 @@ function onanimationframe() {
     h = cameraSensor.height = cameraView.videoHeight;
     ctxt = cameraSensor.getContext("2d");
     ctxt.drawImage(cameraView, 0, 0);
-    imgdata = ctxt.getImageData(0, 0, w / 2, h);
-    ctxt.putImageData(0, 0, imgdata);
-    ctxt.putImageData(w / 2, 0, imgdata);
+    // imgdata = ctxt.getImageData(0, 0, w / 2, h);
+    // ctxt.putImageData(0, 0, imgdata);
+    // ctxt.putImageData(w / 2, 0, imgdata);
 
     // cameraOutput.src = cameraSensor.toDataURL("image/webp");
     // cameraOutput.classList.add("taken");
